@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 # Define project name(local package)
-project_name = "myProjet"
+project_name = "wineQuality"
 
 # List of files to create or check
 list_of_files = [
