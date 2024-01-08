@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
 
-
 @dataclass(frozen=True)
 class DataIngestionConfig:
     root_dir: Path
@@ -21,7 +20,6 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
 
-
 @dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path
@@ -30,4 +28,13 @@ class ModelTrainerConfig:
     model_name: str
     alpha: float
     l1_ratio: float
+    target_column: str
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_data_path: Path
+    model_path: Path
+    all_params: dict
+    metric_file_name: Path
     target_column: str
